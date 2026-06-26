@@ -91,7 +91,7 @@ public class DataInitializer implements CommandLineRunner {
 
         List<SystemConfig> defaults = List.of(
             createConfig("llm.apiUrl", "https://api.deepseek.com/v1/chat/completions", "DeepSeek API 地址", "llm"),
-            createConfig("llm.apiKey", "sk-37eab57deb084a09b4a3d8bb44fe7c6c", "DeepSeek API Key", "llm"),
+            createConfig("llm.apiKey", "REDACTED_OLD_KEY", "DeepSeek API Key", "llm"),
             createConfig("llm.model", "deepseek-chat", "默认模型：DeepSeek-V4-Pro", "llm"),
             createConfig("llm.temperature", "0.5", "默认 Temperature", "llm"),
             createConfig("llm.maxTokens", "4096", "默认 Max Tokens", "llm"),

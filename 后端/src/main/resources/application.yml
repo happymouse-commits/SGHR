@@ -53,7 +53,7 @@ spring:
 llm:
   api:
     url: ${LLM_API_URL:https://api.deepseek.com/v1/chat/completions}
-    key: sk-37eab57deb084a09b4a3d8bb44fe7c6c
+    key: ${LLM_API_KEY:}
     model: ${LLM_API_MODEL:deepseek-chat}
 
 # ===== 多智能体配置 =====

@@ -94,6 +94,8 @@ log "   JAR 已部署: ${JAR_SIZE} bytes"
 
 # ---- 7. 重启服务 ----
 log "[7/8] 重启 Spring Boot..."
+# 注入 LLM_API_KEY 环境变量到 systemd 服务
+systemctl set-environment LLM_API_KEY="${LLM_API_KEY:-$(grep LLM_API_KEY /opt/sghr/app/.env 2>/dev/null | cut -d= -f2-)}"
 systemctl restart sghr
 sleep 3
 log "   服务已重启"
